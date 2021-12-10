@@ -51,7 +51,10 @@ function createPane(
     throw new Error(`A pane with this name already exists: ${name}`)
   }
 
-  const parentPaneName = props.pane ?? context.pane
+  // MARK: removing nullish coalescing operators
+  // const parentPaneName = props.pane ?? context.pane
+  const parentPaneName = (props.pane == null || props.pane == undefined) ? context.pane : props.pane
+  
   const parentPane = parentPaneName
     ? context.map.getPane(parentPaneName)
     : undefined

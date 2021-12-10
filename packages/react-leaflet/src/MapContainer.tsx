@@ -82,7 +82,9 @@ export function MapContainer<
   const contents = context ? (
     <LeafletProvider value={context}>{children}</LeafletProvider>
   ) : (
-    placeholder ?? null
+    // MARK: removing nullish coalescing operators
+    // placeholder ?? null
+    (placeholder == null || placeholder == undefined) ? null : placeholder
   )
   return (
     <div {...props} ref={mapRef}>

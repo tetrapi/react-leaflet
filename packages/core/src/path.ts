@@ -20,7 +20,9 @@ export function usePathOptions(
   useEffect(
     function updatePathOptions() {
       if (props.pathOptions !== optionsRef.current) {
-        const options = props.pathOptions ?? {}
+        // MARK: removing nullish coalescing operators
+        // const options = props.pathOptions ?? {}
+        const options = (props.pathOptions == null || props.pathOptions == undefined) ? {} : props.pathOptions
         element.instance.setStyle(options)
         optionsRef.current = options
       }

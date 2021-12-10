@@ -18,7 +18,10 @@ export function useLayerLifecycle(
 ) {
   useEffect(
     function addLayer() {
-      const container = context.layerContainer ?? context.map
+      // MARK: removing nullish coalescing operators
+      // const container = context.layerContainer ?? context.map
+      const container = (context.layerContainer == null || context.layerContainer == undefined) ? context.map : context.layerContainer
+
       container.addLayer(element.instance)
 
       return function removeLayer() {
