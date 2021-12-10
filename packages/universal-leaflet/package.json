@@ -5,14 +5,14 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PaulLeCam/react-leaflet.git"
+    "url": "https://github.com/tetrapi/react-leaflet.git"
   },
   "author": "Paul Le Cam <paul@ulem.net>",
   "license": "Hippocratic-2.1",
   "bugs": {
     "url": "https://github.com/PaulLeCam/react-leaflet/issues"
   },
-  "homepage": "https://github.com/PaulLeCam/react-leaflet",
+  "homepage": "https://github.com/tetrapi/react-leaflet",
   "peerDependencies": {
     "leaflet": "*"
   }
